@@ -1,9 +1,11 @@
+import { RouterProvider } from "react-router-dom"
+import { router } from "./routes"
 
 function App() {
   
   return (
    <>
-       <h1>movie zone</h1>
+      <RouterProvider router={router}/>
    </>
   )
 }
