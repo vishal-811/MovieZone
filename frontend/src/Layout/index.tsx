@@ -1,32 +1,32 @@
-import {ReactNode } from "react";
+import { ReactNode } from "react";
 import { Box } from "@mui/material";
 import Sidebar from "../components/sidebar";
 
-interface Layoutprops{
-    children :ReactNode
+interface Layoutprops {
+    children: ReactNode;
 }
 
-const Layout=({ Children } :Layoutprops)=>{
-       return(
-           <Box
+const Layout = ({ children }: Layoutprops) => {
+    return (
+        <Box
             sx={{
                 backgroundColor: "#10141F",
                 display: "flex",
                 flexDirection: {
-                  xs: "column",
-                  lg: "row",
+                    xs: "column",
+                    lg: "row",
                 },
                 color: "white",
                 padding: 3,
                 gap: 3,
-                overflowY:"hidden",
-                height: "100vh",
-                // width:"100vw"
-            }}>
-                 <Sidebar/>
-                <Box sx={{ width: "100%", overflowY: "scroll" }}>{Children}</Box>
-           </Box>
-       )
+                overflowY: 'hidden',
+                height: '100vh',
+            }}
+        >
+            <Sidebar />
+            <Box sx={{ width: "100%", overflowY: "scroll", overflowX: "hidden" }}>{children}</Box>
+        </Box>
+    );
 }
 
 export default Layout;

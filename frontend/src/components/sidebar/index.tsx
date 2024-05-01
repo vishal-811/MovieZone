@@ -108,6 +108,7 @@ const Sidebar=()=>{
                   display: "flex",
                   alignItems: "center",
                   gap: 2,
+                  height:'100%',
                   color: "white",
                   textDecoration: "none",
                   ":hover": {
